@@ -1,0 +1,380 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.cllgname {
+    font-size: 2.5vw;
+    text-align: center;
+    font-style: normal;
+    background-color: rgba(0, 186, 233, 0.925);
+    padding-bottom: 5px;
+    text-shadow: 10px 5px 10px rgba(0, 0, 0, 0.87);
+    color: rgb(255, 255, 255);
+    border: 5px solid black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5px;
+
+}
+
+.home {
+    background-color: royalblue;
+    width: 48vw;
+    padding: 3px;
+    border: 2px inset blue;
+    font-size: 1.7827vw;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: fit-content;
+    transition: background-color .5s;
+}
+
+.home:hover {
+    background-color: saddlebrown;
+}
+
+#pic {
+    width: 49vw;
+    border: 2px inset blue;
+    margin-left: 5px;
+    margin-top: 5px;
+    transition: 5s;
+}
+
+@media(max-width:500px) {
+    .home {
+        background-color: yellow;
+        color: rgb(22, 21, 21);
+        width: 95vw;
+        margin-right: 3px;
+        border: 98vw;
+        font-size: 3vw;
+    }
+}
+
+@media(max-width:500px) {
+    #pic {
+        width: 95vw;
+        margin-right: 3px;
+        border: 95vw;
+    }
+}
+
+.navbar {
+    display: flex;
+    background-color: rgb(253, 252, 253);
+    /* color: white; */
+    justify-content: center;
+    padding: 3px;
+}
+
+ul {
+    display: flex;
+
+}
+
+li {
+    display: flex;
+    margin-left: 2vw;
+    font-style: normal;
+}
+
+button {
+    background-color: rgb(255, 174, 0);
+    color: rgb(4, 238, 255);
+    padding: 3px;
+    border: 2px ridge rgb(0, 0, 0);
+    font-size: 1.5vw;
+    border-radius: 10px;
+    width: fit-content;
+    text-align: center;
+}
+
+
+
+@media(max-width:500px) {
+    button {
+        width: fit-content;
+        font-size: 1.7vw;
+    }
+}
+
+@media(max-width:500px) {
+    li {
+        margin-left: 1vw;
+    }
+}
+
+li a {
+    color: white;
+    padding: 5px;
+}
+
+.about {
+    background-color: rgba(180, 219, 73, 0.712);
+    width: 48vw;
+    padding: 3px;
+    border: 2px inset blue;
+    font-size: 1.5vw;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 5px;
+    height: fit-content;
+}
+
+
+@media(max-width:500px) {
+    .about {
+        background-color: rgb(223, 113, 23);
+        color: rgb(22, 21, 21);
+        width: 95vw;
+        margin-right: 3px;
+        border: 98vw;
+        font-size: 3vw;
+    }
+}
+
+.pictures {
+    background-color: rgba(0, 0, 0, 0.836);
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+.pic {
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 2px groove black;
+    margin-top: 2px;
+    text-align: center;
+}
+
+.pic img {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    border: 3px ridge rgb(202, 171, 33);
+    box-shadow: 10px 8px 8px 3px rgb(0, 0, 0);
+    transition: 3s;
+}
+
+@media(max-width:500px) {
+    .pic img {
+        width: 70vw;
+    }
+}
+
+@media(max-width:500px) {
+    .pic img:hover {
+        width: 95vw;
+    }
+}
+
+.ima:hover {
+    border-radius: 10px;
+    box-shadow: 15px 15px 10px 10px rgba(15, 255, 243, 0.527);
+    width: 40vw;
+}
+
+.head2 {
+    font-size: 1.5vw;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: double underline black;
+    display: flex;
+}
+
+@media(max-width:500px) {
+    .head2 {
+        font-size: 5vw;
+    }
+}
+
+.news {
+    display: flex;
+    width: 98vw;
+    height: fit-content;
+    border: 2px solid violet;
+    border-left: none;
+    border-right: none;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
+    font-size: 1vw;
+    background-color: yellow;
+}
+
+@media(max-width:500px) {
+    .news img {
+        width: 20vw;
+    }
+}
+
+.moving {
+    width: 10vw;
+    display: flex;
+}
+
+button:hover {
+    width: fit-content;
+    font-size: 2vw;
+    box-shadow: 5px 5px 2px rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 1px;
+}
+
+li a:hover {
+    color: black;
+}
+
+.moving {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX (100%);
+    transform: translateX(100%);
+
+    -moz-animation: animation 15s linear infinite;
+    -webkit-animation: animation 15s linear infinite;
+    animation: animation 15s linear infinite;
+}
+
+@-webkit-keyframes animation {
+
+    from {
+        -webkit-transform: translateX(1000%);
+    }
+
+    to {
+        -webkit-transform: translateX(-2000%);
+    }
+
+}
+
+@keyframes animation {
+    from {
+        -moz-transform: translateX(1000%);
+        -webkit-transform: translateX(1000%);
+        transform: translateX(1000%);
+    }
+
+    to {
+        -moz-transform: translateX(-2000%);
+        -webkit-transform: translateX(-2000%);
+        transform: translateX(-2000%);
+    }
+}
+
+
+.founder {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1vw;
+}
+
+.card {
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding: 5px;
+    border: 2px groove orange;
+}
+
+.cardimg {
+    width: 25vw;
+    margin-bottom: 10px;
+}
+
+.card2 {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    border: 2px groove orange;
+}
+
+.cardimg2 {
+    width: 25vw;
+    margin-bottom: 10px;
+}
+
+.contact {
+    /* display: flex; */
+    border: 2px solid black;
+    margin-top: 5px;
+    font-size: 1.5vw;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 60px;
+
+}
+
+@media(max-width:500px) {
+    .contact {
+        line-height: 10px;
+    }
+}
+
+.location {
+    /* border: 2px inset blue; */
+    margin-top: 8vw;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    border: 5px ridge goldenrod;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* line-height: 40px; */
+    font-size: 2vw;
+    padding: 5px;
+    margin: 5px;
+}
+
+@media(max-width:500px) {
+    .footer {
+        /* line-height: 10px; */
+        font-size: 3vw;
+    }
+}
+
+#demo {
+    background-color: blue;
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    padding: 3px;
+    display: inline-block;
+    margin-left: 5px;
+}
+#time{
+    display: inline-block;
+    font-size: 1.3vw;
+    background-color:black;
+    color: white;
+
+}
+
+@media(max-width:500px) {
+    p #demo {
+        font-size: 8vw;
+    }
+}
