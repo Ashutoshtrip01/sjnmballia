@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Jai Narayan Mahavidyalaya</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .cllgname {
+            font-size: 2.5vw;
+            text-align: center;
+            font-style: normal;
+            background-color: rgba(0, 186, 233, 0.925);
+            padding-bottom: 5px;
+            text-shadow: 10px 5px 10px rgba(0, 0, 0, 0.87);
+            color: rgb(255, 255, 255);
+            border: 5px solid black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 5px;
+
+        }
+
+        .home {
+            background-color: royalblue;
+            width: 48vw;
+            padding: 3px;
+            border: 2px inset blue;
+            font-size: 1.7827vw;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-left: 5px;
+            height: fit-content;
+            transition: background-color .5s;
+        }
+
+        .home:hover {
+            background-color: saddlebrown;
+        }
+
+        #pic {
+            width: 49vw;
+            border: 2px inset blue;
+            margin-left: 5px;
+            margin-top: 5px;
+            transition: 5s;
+        }
+
+        @media(max-width:500px) {
+            .home {
+                background-color: yellow;
+                color: rgb(22, 21, 21);
+                width: 95vw;
+                margin-right: 3px;
+                border: 98vw;
+                font-size: 3vw;
+            }
+        }
+
+        @media(max-width:500px) {
+            #pic {
+                width: 95vw;
+                margin-right: 3px;
+                border: 95vw;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            background-color: rgb(253, 252, 253);
+            /* color: white; */
+            justify-content: center;
+            padding: 3px;
+        }
+
+        ul {
+            display: flex;
+
+        }
+
+        li {
+            display: flex;
+            margin-left: 2vw;
+            font-style: normal;
+        }
+
+        button {
+            background-color: rgb(255, 174, 0);
+            color: rgb(4, 238, 255);
+            padding: 3px;
+            border: 2px ridge rgb(0, 0, 0);
+            font-size: 1.5vw;
+            border-radius: 10px;
+            width: fit-content;
+            text-align: center;
+        }
+
+
+
+        @media(max-width:500px) {
+            button {
+                width: fit-content;
+                font-size: 1.7vw;
+            }
+        }
+
+        @media(max-width:500px) {
+            li {
+                margin-left: 1vw;
+            }
+        }
+
+        li a {
+            color: white;
+            padding: 5px;
+        }
+
+        .about {
+            background-color: rgba(180, 219, 73, 0.712);
+            width: 48vw;
+            padding: 3px;
+            border: 2px inset blue;
+            font-size: 1.5vw;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-left: 5px;
+            height: fit-content;
+        }
+
+
+        @media(max-width:500px) {
+            .about {
+                background-color: rgb(223, 113, 23);
+                color: rgb(22, 21, 21);
+                width: 95vw;
+                margin-right: 3px;
+                border: 98vw;
+                font-size: 3vw;
+            }
+        }
+
+        .pictures {
+            background-color: rgba(0, 0, 0, 0.836);
+            overflow: auto;
+            white-space: nowrap;
+            margin-top: 10px;
+        }
+
+        .pic {
+            display: flex;
+            margin-left: 5px;
+            margin-right: 5px;
+            justify-content: center;
+            flex-wrap: wrap;
+            border: 2px groove black;
+            margin-top: 2px;
+            text-align: center;
+        }
+
+        .pic img {
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            border: 3px ridge rgb(202, 171, 33);
+            box-shadow: 10px 8px 8px 3px rgb(0, 0, 0);
+            transition: 3s;
+        }
+
+        @media(max-width:500px) {
+            .pic img {
+                width: 70vw;
+            }
+        }
+
+        @media(max-width:500px) {
+            .pic img:hover {
+                width: 95vw;
+            }
+        }
+
+        .ima:hover {
+            border-radius: 10px;
+            box-shadow: 15px 15px 10px 10px rgba(15, 255, 243, 0.527);
+            width: 40vw;
+        }
+
+        .head2 {
+            font-size: 1.5vw;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-decoration: double underline black;
+            display: flex;
+        }
+
+        @media(max-width:500px) {
+            .head2 {
+                font-size: 5vw;
+            }
+        }
+
+        .news {
+            display: flex;
+            width: 98vw;
+            height: fit-content;
+            border: 2px solid violet;
+            border-left: none;
+            border-right: none;
+            margin-top: 5px;
+            margin-left: 5px;
+            padding-left: 5px;
+            font-size: 1vw;
+            background-color: yellow;
+        }
+
+        @media(max-width:500px) {
+            .news img {
+                width: 20vw;
+            }
+        }
+
+        .moving {
+            width: 10vw;
+            display: flex;
+        }
+
+        button:hover {
+            width: fit-content;
+            font-size: 2vw;
+            box-shadow: 5px 5px 2px rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            color: black;
+            border-radius: 1px;
+        }
+
+        li a:hover {
+            color: black;
+        }
+
+        .moving {
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX (100%);
+            transform: translateX(100%);
+
+            -moz-animation: animation 15s linear infinite;
+            -webkit-animation: animation 15s linear infinite;
+            animation: animation 15s linear infinite;
+        }
+
+        @-webkit-keyframes animation {
+
+            from {
+                -webkit-transform: translateX(1000%);
+            }
+
+            to {
+                -webkit-transform: translateX(-2000%);
+            }
+
+        }
+
+        @keyframes animation {
+            from {
+                -moz-transform: translateX(1000%);
+                -webkit-transform: translateX(1000%);
+                transform: translateX(1000%);
+            }
+
+            to {
+                -moz-transform: translateX(-2000%);
+                -webkit-transform: translateX(-2000%);
+                transform: translateX(-2000%);
+            }
+        }
+
+
+        .founder {
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 1vw;
+        }
+
+        .card {
+            justify-content: center;
+            text-align: center;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+            margin-right: 5px;
+            padding: 5px;
+            border: 2px groove orange;
+        }
+
+        .cardimg {
+            width: 25vw;
+            margin-bottom: 10px;
+        }
+
+        .card2 {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: fit-content;
+            margin-left: 5px;
+            margin-top: 5px;
+            padding: 5px;
+            border: 2px groove orange;
+        }
+
+        .cardimg2 {
+            width: 25vw;
+            margin-bottom: 10px;
+        }
+
+        .contact {
+            /* display: flex; */
+            border: 2px solid black;
+            margin-top: 5px;
+            font-size: 1.5vw;
+            padding: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            line-height: 60px;
+
+        }
+
+        @media(max-width:500px) {
+            .contact {
+                line-height: 10px;
+            }
+        }
+
+        .location {
+            /* border: 2px inset blue; */
+            margin-top: 8vw;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            border: 5px ridge goldenrod;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* line-height: 40px; */
+            font-size: 2vw;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        @media(max-width:500px) {
+            .footer {
+                /* line-height: 10px; */
+                font-size: 3vw;
+            }
+        }
+
+        #demo {
+            background-color: blue;
+            color: white;
+            font-size: 1.5vw;
+            text-align: center;
+            padding: 3px;
+            display: inline-block;
+            margin-left: 5px;
+        }
+        #time{
+            display: inline-block;
+            font-size: 1.3vw;
+            background-color:black;
+            color: white;
+
+        }
+
+        @media(max-width:500px) {
+            p #demo {
+                font-size: 8vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cllgname">
+        <h1>SHRI JAI NARAYAN MAHAVIDYALAYA</h1>
+        <h5 style="font-size: 4vw;">Durgipur Beruarbari Ballia (U.P) </h5>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><button id="b1"><a href="#">HOME</a></button></li>
+            <li><button id="b2"> <a href="about.html" target="_blank">ABOUT US</a></button></li>
+            <li> <button id="b3"> <a href="society.html" target="_blank">SOCIETY</a></button></li>
+            <li><button id="b4"> <a href="academic.html" target="_blank">ACADEMICS</a></button></li>
+            <li> <button id="b5"> <a href="galler.html" target="_blank">PHOTO GALLERY</a></button></li>
+            <li><button id="b6"> <a href="contact.html" target="_blank">CONTACT US</a></button> </li>
+        </ul>
+    </div>
+    <p id="demo"></p>
+    <button id="time" type onclick="document.getElementById('time').innerHTML = Date()">Click to Display Date and time</button>
+    <div class="news">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.54 AM.jpeg" alt="" class="moving">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.55 AM (1).jpeg" alt="" class="moving">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.55 AM.jpeg" alt="" class="moving">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.56 AM (1)" alt="" class="moving">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.56 AM.jpeg" alt="" class="moving">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.57 AM (1).jpeg" alt="" class="moving">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.57 AM (2).jpeg" alt="" class="moving">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.57 AM.jpeg" alt="" class="moving">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.59 AM (1).jpeg" alt="" class="moving">
+        <img src="WhatsApp Image 2022-01-26 at 11.54.59 AM (2).jpeg" alt="" class="moving">
+        <img src="IMG-20220121-WA0055.jpg" alt="" class="moving">
+        <img src="IMG-20220121-WA0051.jpg" alt="" class="moving">
+        <img src="IMG-20220121-WA0057.jpg" alt="" class="moving">
+        <img src="IMG-20220121-WA0041.jpg" alt="" class="moving">
+        <img src="IMG-20220121-WA0034.jpg" alt="" class="moving">
+        <img src="IMG-20220121-WA0021.jpg" alt="" class="moving">
+        <img src="IMG-20220121-WA0022.jpg" alt="" class="moving">
+        <img src="IMG-20220121-WA0024.jpg" alt="" class="moving">
+        <img class="moving" src="http://jnmahavidyalaya.in/image/docs/img4.jpg" alt="campus image">
+        <img class="moving" src="http://jnmahavidyalaya.in/image/docs/img1.jpg" alt="library">
+        <img class="moving" src="http://jnmahavidyalaya.in/image/docs/img2.jpg" alt="classroom">
+    </div>
+
+    <div class="header">
+        <div class="pics">
+            <img id="pic" src="http://jnmahavidyalaya.in/2475862bal.jpg" alt="college image">
+
+        </div>
+
+        <div class="home">
+            <h2 style="padding: 10px;">HOME</h2>
+            <hr>
+            <p style="padding:10px;"> <strong> Shri Jai Narayan Mahavidyalaya</strong> is creating awareness in remote
+                rural area of village
+                of Durgipur. durgipur is one of the biggest revenue village of Tehsil Beruarbari.The literacy percentage
+                in surrounding area comes to be very low. With the motive to extend higher education to the rural people
+                as well as in <strong>Backword area </strong><strong>Shri Jai Narayan Mahavidyalaya has been
+                    established.</strong> We have also encourage the students to develope their physical and mental
+                level through various games and sports. We are gladful to sincere support of all concerned, particularly
+                staff members & students of the college for their devotion, dedication and cooperation in all respect.
+                The college is attaining new heights and students to experience he change and participate in achieving
+                excellence.</p>
+        </div>
+
+    </div>
+
+    <div class="pic">
+        <div class="head2">PICTURES</div>
+        <img class="ima" src="cllg.jpg" alt="IMG">
+        <img class="ima" src="IMG-20220121-WA0011.jpg" alt="IMG">
+        <img class="ima" src="IMG-20220121-WA0043.jpg" alt="IMG">
+        <img class="ima" src="IMG-20220121-WA0067.jpg" alt="IMG">
+    </div>
+    <div class="founder">
+        <div class="card2">
+            <img class="cardimg2" src="bhagwan pathak.jpeg" alt="">
+            <h3>CUSTODIAN - BHAGWAN PATHAK</h3>
+            <p>Ex-MLA</p>
+        </div>
+
+        <div class="contact">
+            <h3>CONTACT DETAIL</h3>
+            <hr>
+            <P><STRONG>MOBILE NUMBER-</STRONG> 09415560013</P>
+            <p><strong>E Mail-</strong> <a href="info@jnmahavidyalaya.in" target="_blank"> info@jnmahavidyalaya.in</a>
+            </p>
+            <div class="location">
+                <h2>LOCATION</h2>
+                <hr>
+                <a href="https://www.google.com/maps/place/Sri+Jai+Narayan+Mahavidyalay+(B.Ed+and+B.A+college)/@25.8848825,84.1266791,17z/data=!3m1!4b1!4m5!3m4!1s0x399267e7e92a8e8d:0xf0a21b874abcb5ba!8m2!3d25.8848825!4d84.1288678"
+                    target="_blank">SRI JAI NARAYAN MAHAVIDYALAYA DURGIPUR BERUARBARI BALLIA </a>
+            </div>
+        </div>
+        <div class="card">
+            <img class="cardimg" src="shambhu tiwari.jpeg" alt="">
+            <h3>FOUNDER - SHAMBHU NATH TIWARI</h3>
+            <p>(President) Satish Chand College Ballia</p>
+        </div>
+    </div>
+    <div class="footer">
+        <h3>ALL RIGHTS RESERVED</h3>
+        <hr>
+        <h3 style="text-decoration: underline;">WebPage Designed By- Ashutosh tripathi</h3>
+        <p>Address- HOSPITAL ROAD BALLIA (U.P)</p>
+        <h4>FOLLOW ME ON</h4>
+        <p>INSTAGRAM- <a style="color:skyblue;font-size: 2vw;" href="https://www.instagram.com/tripathi.ji_183/"
+                target="_blank">tripathi.ji_183</a></p>
+    </div>
+    <script>
+        let person = prompt("Please enter your name:", "yourname"); {
+            if (person != null) {
+                document.getElementById("demo").innerHTML = "Hello! " + person + ", Welcome to the official website of Sri Jai Narayan Mahavidyalaya";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
